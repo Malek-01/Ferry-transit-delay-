@@ -1,12 +1,12 @@
-# Import necessary libraries
-from sklearn.ensemble import GradientBoostingRegressor
+from sklearn.ensemble import RandomForestRegressor
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.impute import SimpleImputer
-from sklearn.metrics import r2_score
+from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 import shap
 import matplotlib.pyplot as plt
+import time
 
 # Load the merged data
 data = pd.read_csv("Data-NYC.csv")
@@ -24,36 +24,39 @@ X[non_numeric_columns] = X[non_numeric_columns].apply(lambda col: label_encoder.
 imputer = SimpleImputer(strategy='mean')
 X = pd.DataFrame(imputer.fit_transform(X), columns=X.columns)
 
-# Split data into training and testing sets
-train_pct_index = int(0.8 * len(data))
-X_train, X_test = X.iloc[:train_pct_index], X.iloc[train_pct_index:]
-y_train, y_test = y.iloc[:train_pct_index], y.iloc[train_pct_index:]
-
 # Standardize features
 scaler = StandardScaler()
-X_train_scaled = scaler.fit_transform(X_train)
-X_test_scaled = scaler.transform(X_test)
+X_scaled = scaler.fit_transform(X)
 
-# Convert scaled arrays back to DataFrame to keep column names
-X_train_scaled_df = pd.DataFrame(X_train_scaled, columns=X.columns)
-X_test_scaled_df = pd.DataFrame(X_test_scaled, columns=X.columns)
+# Train the model on the entire dataset
+reg = RandomForestRegressor(max_depth=100, random_state=0)
+start_time = time.process_time()
+reg.fit(X_scaled, y)
+end_time = time.process_time()
 
-# Train the model
-reg = GradientBoostingRegressor()
-reg.fit(X_train_scaled_df, y_train)
-
-# Make predictions
-y_pred = reg.predict(X_test_scaled_df)
-
-# Explain predictions using SHAP
-explainer = shap.Explainer(reg)
-shap_values = explainer(X_test_scaled_df)
+# Evaluate the model using the entire dataset
+y_pred = reg.predict(X_scaled)
 
 # Evaluate the model
-print('R^2 Score:', r2_score(y_test, y_pred))
-print(f"Shap values length: {len(shap_values)}\n")
+cpu_time = end_time - start_time
+r2 = r2_score(y, y_pred)
+mae = mean_absolute_error(y, y_pred)
+mse = mean_squared_error(y, y_pred)
+rmse = np.sqrt(mse)
+
+print(f"CPU time: {cpu_time:.2f} seconds")
+print('R^2 Score:', r2)
+print(f'Mean Absolute Error: {mae:.2f}')
+print(f'Mean Squared Error: {mse:.2f}')
+print(f'Root Mean Squared Error: {rmse:.2f}')
+
+# Explain predictions using SHAP
+explainer = shap.Explainer(reg, X_scaled)
+shap_values = explainer(X_scaled)
+
+print(f"Shap values length: {len(shap_values)}")
 print(f"Sample shap value:\n{shap_values[0]}")
 
 # Visualize SHAP values as a bar plot
-shap.summary_plot(shap_values, X_test_scaled_df, plot_type='bar')
+shap.summary_plot(shap_values, X, plot_type='bar')
 plt.savefig('/mnt/data/Shap1_NYC.png')
