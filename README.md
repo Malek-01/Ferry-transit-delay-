@@ -2,26 +2,6 @@
 
 This repository contains code for predicting ferry transit delays using various machine learning models and evaluating their performance.
 
-## Project Structure
-
-Ferry-transit-delay--main/
-│
-├── Prediction/
-│ ├── DNN prediction.py
-│ ├── GB prediction.py
-│ ├── RF prediction.py
-│ └── SVR prediction.py
-│
-├── SHAP/
-│ ├── SHAP Sydney .py
-│ └── SHAP_NYC/
-│
-└── Validation/
-├── DNN CV.py
-├── GB CV.py
-├── RF CV.py
-└── SVR CV.py
-
 
 ## Requirements
 
