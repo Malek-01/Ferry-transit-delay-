@@ -46,7 +46,7 @@ def main():
     # File paths
     data_file = 'Merged1.csv'
     ridership_file = 'Ridership3.xlsx'
-    output_file = 'Merged-final.csv'
+    output_file = 'Data-Sydney.csv'
 
     try:
         # Read CSV and Excel files
