@@ -62,7 +62,7 @@ def evaluate_model(y_test, y_pred, cpu_time):
     print('Root Mean Squared Error:', np.sqrt(mean_squared_error(y_test, y_pred)))
 
 def main():
-    data = load_data('data3.csv')
+    data = load_data('Data-Sydney.csv')
     X, y = preprocess_data(data)
     
     # Split the data
