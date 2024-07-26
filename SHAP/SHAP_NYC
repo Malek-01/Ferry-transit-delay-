@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jul 23 17:50:00 2024
+
+@author: Malek
+"""
 from sklearn.ensemble import RandomForestRegressor
 import pandas as pd
 import numpy as np
@@ -52,11 +58,11 @@ print(f'Root Mean Squared Error: {rmse:.2f}')
 
 # Explain predictions using SHAP
 explainer = shap.Explainer(reg, X_scaled)
-shap_values = explainer(X_scaled)
+shap_values = explainer(X_scaled, check_additivity=False)  # Disable additivity check
 
 print(f"Shap values length: {len(shap_values)}")
 print(f"Sample shap value:\n{shap_values[0]}")
 
 # Visualize SHAP values as a bar plot
 shap.summary_plot(shap_values, X, plot_type='bar')
-plt.savefig('/mnt/data/Shap1_NYC.png')
+plt.savefig('Shap1_NYC.png')
