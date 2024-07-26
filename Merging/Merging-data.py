@@ -51,7 +51,7 @@ def main():
     weather_file = "Weather.xlsx"
     capacity_file = "Capacity.xlsx"
     holidays_file = "Holidays2.xlsx"
-    output_file = 'merged1.csv'
+    output_file = 'Merged1.csv'
 
     try:
         # Read CSV and Excel files
