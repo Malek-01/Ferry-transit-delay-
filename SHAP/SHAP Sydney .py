@@ -82,7 +82,7 @@ def explain_model(reg, X_test):
     shap.summary_plot(shap_values, plot_type='bar')
 
 def main():
-    X, y = load_and_preprocess_data('data3.csv')
+    X, y = load_and_preprocess_data('Data-Sydney.csv')
     X_train, X_test, y_train, y_test = split_and_scale_data(X, y)
     reg, X_test_scaled = train_and_evaluate_model(X_train, X_test, y_train, y_test)
     explain_model(reg, X_test_scaled)
