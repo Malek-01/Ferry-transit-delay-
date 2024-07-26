@@ -44,9 +44,9 @@ def save_data_to_csv(data, filename):
 
 def main():
     # File paths
-    data_file = 'data.csv'
+    data_file = 'Merged1.csv'
     ridership_file = 'Ridership3.xlsx'
-    output_file = 'data3.csv'
+    output_file = 'Merged-final.csv'
 
     try:
         # Read CSV and Excel files
