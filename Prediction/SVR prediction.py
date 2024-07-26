@@ -117,7 +117,7 @@ def main():
     """
     Main function to run the data loading, preprocessing, training, and evaluation pipeline.
     """
-    data = load_data('data3.csv')
+    data = load_data('Data-Sydney.csv')
     X, y = preprocess_data(data)
     
     # Split the data
