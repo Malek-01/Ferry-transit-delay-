@@ -5,7 +5,7 @@ This repository contains scripts for processing and merging ferry transit delay 
 ## Files
 
 - `Merging-data.py`: Script for reading, processing, and merging multiple CSV and Excel files into a single dataset.
-- `Merging-data with ridership.py`: Script for merging `data.csv` with ridership information from `Ridership3.xlsx`.
+- `Merging-data with ridership.py`: Script for merging the generated file `Merged1.csv` with ridership information from `Ridership3.xlsx`.
 - `requirements.txt`: List of Python dependencies.
 - `README.md`: This file.
 
