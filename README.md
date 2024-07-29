@@ -37,11 +37,6 @@ Run the cross-validation scripts located in the Validation directory to evaluate
 
 python Validation/RF\ CV.py
 
-
-Here is the README content in a code block for easy copying and pasting directly into your README.md file:
-
-markdown
-نسخ الكود
 # Ferry Transit Delay Prediction
 
 This repository contains code for predicting ferry transit delays using various machine learning models and evaluating their performance.
