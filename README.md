@@ -1,6 +1,6 @@
 # Ferry Transit Delay Prediction
 
-This repository contains code for predicting ferry transit delays using various machine learning models and evaluating their performance.
+This repository contains code for predicting ferry transit delays using various machine learning models and evaluating their performance. The data for this project is available in a https://drive.google.com/drive/folders/1Qocy3x_pePx0oHZjX_QpbubIB_8KDNZX?usp=drive_link
 
 
 ## Requirements
@@ -65,17 +65,18 @@ Install the required libraries (if not already installed):
 bash
 pip install -r requirements.txt
 Run the prediction scripts located in the Prediction directory to predict ferry transit delays using different models. For example, to run the Random Forest prediction:
-
 bash
 python Prediction/RF\ prediction.py
-Run the SHAP analysis scripts located in the SHAP directory to interpret the model predictions. For example:
 
 bash
 python SHAP/SHAP\ Sydney\ .py
-Run the cross-validation scripts located in the Validation directory to evaluate model performance. For example:
+Run the SHAP analysis scripts located in the SHAP directory to interpret the model predictions. For example:
+
 
 bash
 python Validation/RF\ CV.py
+Run the cross-validation scripts located in the Validation directory to evaluate model performance. For example:
+
 Contributing
 Contributions are welcome! Please open an issue or submit a pull request.
 
