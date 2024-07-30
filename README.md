@@ -39,15 +39,10 @@ Run the cross-validation scripts located in the Validation directory to evaluate
 python Validation/RF_CV.py
 
 Contributing
+
 Contributions are welcome! Please open an issue or submit a pull request.
 
 License
-This project is licensed under the MIT License. See the LICENSE file for details.
 
-
-Contributing
-Contributions are welcome! Please open an issue or submit a pull request.
-
-License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
