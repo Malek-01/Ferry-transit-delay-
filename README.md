@@ -16,12 +16,14 @@ https://drive.google.com/drive/folders/1Qocy3x_pePx0oHZjX_QpbubIB_8KDNZX?usp=dri
 
 ## Usage
 
-1. Clone the repository:
+Usage
+Clone the repository:
 
 git clone <repository_url>
 cd Ferry-transit-delay--main
 
 Install the required libraries (if not already installed):
+
 pip install -r requirements.txt
 
 Run the prediction scripts located in the Prediction directory to predict ferry transit delays using different models. For example, to run the Random Forest prediction:
@@ -33,6 +35,7 @@ Run the SHAP analysis scripts located in the SHAP directory to interpret the mod
 python SHAP/SHAP_Sydney.py
 
 Run the cross-validation scripts located in the Validation directory to evaluate model performance. For example:
+
 python Validation/RF_CV.py
 
 Contributing
@@ -41,7 +44,6 @@ Contributions are welcome! Please open an issue or submit a pull request.
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-python Validation/RF_CV.py
 
 Contributing
 Contributions are welcome! Please open an issue or submit a pull request.
