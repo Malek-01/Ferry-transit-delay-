@@ -19,6 +19,7 @@ https://drive.google.com/drive/folders/1Qocy3x_pePx0oHZjX_QpbubIB_8KDNZX?usp=dri
 Usage
 Clone the repository:
 
+```bash
 git clone <repository_url>
 cd Ferry-transit-delay--main
 
