@@ -21,12 +21,14 @@ Clone the repository:
 
 ```bash
 git clone <repository_url>
-cd Ferry-transit-delay--main```
+cd Ferry-transit-delay--main
+```
+
 
 Install the required libraries (if not already installed):
-
+```
 pip install -r requirements.txt
-
+```
 Run the prediction scripts located in the Prediction directory to predict ferry transit delays using different models. For example, to run the Random Forest prediction:
 
 python Prediction/RF_prediction.py
