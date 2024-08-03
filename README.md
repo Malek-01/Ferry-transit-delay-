@@ -20,7 +20,7 @@ Usage
 Clone the repository:
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/Malek-01/Ferry-transit-delay-
 cd Ferry-transit-delay--main
 ```
 
