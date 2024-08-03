@@ -9,7 +9,6 @@ from sklearn.impute import SimpleImputer
 def load_data(filepath):
     """Load and preprocess the dataset."""
     data = pd.read_csv(filepath)
-    data = data.iloc[1:100000, :]  # Adjust slice as needed
     return data
 
 def preprocess_data(data):
