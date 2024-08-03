@@ -30,16 +30,19 @@ Install the required libraries (if not already installed):
 pip install -r requirements.txt
 ```
 Run the prediction scripts located in the Prediction directory to predict ferry transit delays using different models. For example, to run the Random Forest prediction:
-
+```
 python Prediction/RF_prediction.py
+```
 
 Run the SHAP analysis scripts located in the SHAP directory to interpret the model predictions. For example:
-
+```
 python SHAP/SHAP_Sydney.py
+```
 
 Run the cross-validation scripts located in the Validation directory to evaluate model performance. For example:
-
+```
 python Validation/RF_CV.py
+```
 
 Contributing
 
