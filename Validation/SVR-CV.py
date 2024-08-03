@@ -8,7 +8,6 @@ from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 def load_data(filepath):
     """Load and preprocess the dataset."""
     data = pd.read_csv(filepath)
-    data = data.iloc[1:100000, :]  
     return data
 
 def preprocess_data(data):
