@@ -21,7 +21,7 @@ Clone the repository:
 
 ```bash
 git clone <repository_url>
-cd Ferry-transit-delay--main
+cd Ferry-transit-delay--main```
 
 Install the required libraries (if not already installed):
 
