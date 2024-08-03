@@ -8,7 +8,6 @@ from sklearn.neural_network import MLPRegressor
 def load_data(filepath):
     """Load and preprocess the dataset."""
     data = pd.read_csv(filepath)
-    data = data.iloc[1:100000, :]  # Adjust slice as needed
     return data
 
 def preprocess_data(data):
