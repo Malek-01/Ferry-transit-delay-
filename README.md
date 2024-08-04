@@ -46,11 +46,11 @@ python SHAP/SHAP-Sydney.py
 ```
 
 
-`##Contributing`
+## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request.
 
-`##License`
+## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
