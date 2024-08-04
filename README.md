@@ -31,17 +31,17 @@ pip install -r requirements.txt
 ```
 Run the prediction scripts located in the Prediction directory to predict ferry transit delays using different models. For example, to run the Random Forest prediction:
 ```
-python Prediction/RF_prediction.py
+python Prediction/RF-prediction.py
 ```
 
-Run the SHAP analysis scripts located in the SHAP directory to interpret the model predictions. For example:
+Run the SHAP analysis scripts located in the SHAP directory to interpret model predictions and identify the most important features affecting those predictions. SHAP (SHapley Additive exPlanations) values offer a comprehensive view of feature contributions. For example:
 ```
-python SHAP/SHAP_Sydney.py
+python SHAP/SHAP-Sydney.py
 ```
 
-Run the cross-validation scripts located in the Validation directory to evaluate model performance. For example:
+Run the cross-validation scripts located in the Validation directory to optimize hyperparameters for each model and evaluate their performance. This step ensures that you select the best model configuration for accurate ferry transit delay predictions. For example:
 ```
-python Validation/RF_CV.py
+python Validation/RF-CV.py
 ```
 
 Contributing
