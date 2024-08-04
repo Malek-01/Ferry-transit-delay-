@@ -49,4 +49,9 @@ The processed data will be saved to `merged1.csv`.
 
 ### Merging with Ridership Information
 
+Run the script:
+    ```sh
+    python Merging-data-ridership.py
+    ```
+
 The `Merging-data-ridership.py` script reads `Merged1.csv` and merges it with ridership to generate the file `Data-Sydney.csv` that would be processed.
