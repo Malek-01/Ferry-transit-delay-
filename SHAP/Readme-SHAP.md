@@ -8,7 +8,6 @@ This script processes data from Data-Sydney.csv, splits it into training and tes
 Usage
 Run with:
 
-bash
 ```
 python sydney_script.py
 ```
@@ -18,7 +17,6 @@ This script processes data from Data-NYC.csv, trains a RandomForestRegressor mod
 
 Usage
 
-bash
 ```
 python nyc_script.py
 ```
