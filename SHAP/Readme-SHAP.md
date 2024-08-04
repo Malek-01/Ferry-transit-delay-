@@ -9,7 +9,6 @@ Usage
 Run with:
 
 bash
-Copy code
 ```
 python sydney_script.py
 ```
@@ -20,7 +19,6 @@ This script processes data from Data-NYC.csv, trains a RandomForestRegressor mod
 Usage
 
 bash
-Copy code
 ```
 python nyc_script.py
 ```
