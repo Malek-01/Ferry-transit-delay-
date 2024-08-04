@@ -9,7 +9,7 @@ Usage
 Run with:
 
 ```
-python sydney_script.py
+python SHAP-Sydney.py
 ```
 
 NYC Data Analysis (SHAP_NYC.py)
@@ -18,7 +18,7 @@ This script processes data from Data-NYC.csv, trains a RandomForestRegressor mod
 Usage
 
 ```
-python nyc_script.py
+python SHAP-NYC.py
 ```
 Outputs
 Both scripts print evaluation metrics and generate SHAP summary plots saved as PNG files.
