@@ -1,6 +1,5 @@
 # Ferry Transit Delay Prediction
-This repository contains code for predicting ferry transit delays using various machine learning models and evaluating their performance. The data for this project is available here.
-https://drive.google.com/drive/folders/1Qocy3x_pePx0oHZjX_QpbubIB_8KDNZX?usp=drive_link
+This repository contains code for predicting ferry transit delays using various machine learning models and evaluating their performance. The data used in this project is available in a shared Google Drive folder. You can access it [here](https://drive.google.com/drive/folders/1Qocy3x_pePx0oHZjX_QpbubIB_8KDNZX?usp=drive_link).
 
 
 ## Requirements
