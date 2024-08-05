@@ -6,7 +6,7 @@ https://drive.google.com/drive/folders/1Qocy3x_pePx0oHZjX_QpbubIB_8KDNZX?usp=dri
 ## Requirements
 
 - Python 3.x
-- Required Python libraries are specified in requirements.txt
+- Dependencies: The required Python libraries are specified in the requirements.txt file
 
 ## Usage
 
