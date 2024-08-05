@@ -3,7 +3,7 @@ This folder contains scripts for data analysis and prediction using RandomForest
 
 
 Sydney Data Analysis (SHAP-Sydney.py)
-This script processes data from Data-Sydney.csv, splits it into training and testing sets, trains a RandomForestRegressor model on the entire model (R-square more than 0.9), evaluates its performance, and explains predictions using SHAP.
+This script processes Data-Sydney.csv, splitting it into training and testing sets. It trains a RandomForestRegressor model, achieving an R-squared value over 0.9, evaluates performance, and uses SHAP values to explain predictions.
 
 Usage
 Run with:
@@ -13,7 +13,8 @@ python SHAP-Sydney.py
 ```
 
 NYC Data Analysis (SHAP_NYC.py)
-This script processes data from Data-NYC.csv, trains a RandomForestRegressor model on the entire dataset, evaluates its performance (R-square more than 0.9), and explains predictions using SHAP.
+This script processes Data-NYC.csv, trains a RandomForestRegressor model achieving an R-squared value over 0.9, evaluates its performance, and uses SHAP values to explain predictions.
+
 
 Usage
 
