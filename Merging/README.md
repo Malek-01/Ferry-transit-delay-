@@ -1,6 +1,6 @@
 # Ferry Transit Delay Data Processing
 
-This repository contains scripts for processing and merging ferry transit delay data with additional datasets such as weather, capacity, holidays, and ridership information. We note this is the merging case for Sydney. The other case is pretty similar and the code for merging for NYC data alongside with data can be found [here](https://drive.google.com/drive/u/1/folders/1kNsvRY6ui6kL3Glcw2DzUNc4-mIyhNsa).
+This repository contains scripts for processing and merging ferry transit delay data with additional datasets, such as weather, capacity, holidays, and ridership information. This documentation specifically addresses the merging process for the Sydney case. The process for NYC is quite similar, and the code for merging NYC data, along with the corresponding data, can be found in the link [here](https://drive.google.com/drive/u/1/folders/1kNsvRY6ui6kL3Glcw2DzUNc4-mIyhNsa).
 
 ## Files
 
