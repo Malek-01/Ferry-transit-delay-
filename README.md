@@ -6,13 +6,7 @@ https://drive.google.com/drive/folders/1Qocy3x_pePx0oHZjX_QpbubIB_8KDNZX?usp=dri
 ## Requirements
 
 - Python 3.x
-- Required Python libraries are specified in each script. Typically, you will need:
-  - `numpy`
-  - `pandas`
-  - `scikit-learn`
-  - `tensorflow` (for DNN)
-  - `xgboost` (for Gradient Boosting)
-  - `shap` (for SHAP analysis)
+- Required Python libraries are specified in requirements.txt
 
 ## Usage
 
