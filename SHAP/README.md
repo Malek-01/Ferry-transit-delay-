@@ -22,7 +22,9 @@ Usage
 python SHAP-NYC.py
 ```
 Outputs
+
 Both scripts print evaluation metrics and generate SHAP summary plots saved as PNG files.
 
 Notes
+
 Place Data-Sydney.csv and Data-NYC.csv in the same directory as the scripts or adjust file paths accordingly.
