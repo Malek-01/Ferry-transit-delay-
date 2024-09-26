@@ -7,6 +7,17 @@ from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 from sklearn.model_selection import train_test_split
 import time
 
+import pandas as pd
+import numpy as np
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.impute import SimpleImputer
+from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
+from sklearn.model_selection import train_test_split
+import time
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, BatchNormalization
+from keras.regularizers import l2
+
 def load_data(filepath):
     """
     Load the dataset from a CSV file and rename columns if needed.
@@ -85,7 +96,7 @@ def standardize_features(X_train, X_test):
 
 def train_and_predict(X_train, y_train, X_test):
     """
-    Train the Random Forest Regressor model and make predictions.
+    Train the DNN model and make predictions.
 
     Parameters:
     X_train (array): Standardized training features.
@@ -96,12 +107,30 @@ def train_and_predict(X_train, y_train, X_test):
     array, float: Predictions and CPU time taken to train and predict.
     """
     start_time = time.process_time()
-    reg = RandomForestRegressor(max_depth=100, random_state=0)
-    reg.fit(X_train, y_train)
-    y_pred = reg.predict(X_test)
-    end_time = time.process_time()
 
+    # Define the DNN model
+    model = Sequential()
+    model.add(Dense(64, input_dim=X_train.shape[1], activation='tanh', kernel_regularizer=l2(0.001)))  # Input layer + hidden
+    model.add(BatchNormalization())  # Batch Normalization
+    model.add(Dropout(0.5))  # Dropout layer
+    model.add(Dense(32, activation='tanh', kernel_regularizer=l2(0.001)))  # Second hidden layer
+    model.add(BatchNormalization())  # Batch Normalization
+    model.add(Dropout(0.5))  # Dropout layer
+    model.add(Dense(16, activation='tanh', kernel_regularizer=l2(0.001)))  # Third hidden layer
+    model.add(Dense(1))  # Output layer (regression)
+
+    # Compile the model with Mean Absolute Error as loss function
+    model.compile(loss='mean_absolute_error', optimizer='adam', metrics=['mean_absolute_error'])
+
+    # Train the model
+    model.fit(X_train, y_train, epochs=100, batch_size=32, verbose=1)
+
+    # Make predictions
+    y_pred = model.predict(X_test).flatten()
+
+    end_time = time.process_time()
     cpu_time = end_time - start_time
+
     return y_pred, cpu_time
 
 def evaluate_model(y_test, y_pred, cpu_time):
@@ -124,3 +153,25 @@ def main():
     Main function to run the data loading, preprocessing, training, and evaluation pipeline.
     """
     data = load_data('Data-Sydney.csv')
+    X, y = preprocess_data(data)
+    
+    # Split the data
+    train_pct_index = int(0.8 * len(X))
+    X_train, X_test = X.iloc[:train_pct_index], X.iloc[train_pct_index:]
+    y_train, y_test = y.iloc[:train_pct_index], y.iloc[train_pct_index:]
+    
+    # Remove outliers
+    X_train, y_train = remove_outliers(X_train, y_train)
+    X_test, y_test = remove_outliers(X_test, y_test)
+    
+    # Standardize features
+    X_train_scaled, X_test_scaled = standardize_features(X_train, X_test)
+    
+    # Train the model and predict
+    y_pred, cpu_time = train_and_predict(X_train_scaled, y_train, X_test_scaled)
+    
+    # Evaluate the model
+    evaluate_model(y_test, y_pred, cpu_time)
+
+if __name__ == "__main__":
+    main()
