@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 from sklearn.impute import SimpleImputer
@@ -48,7 +48,7 @@ def train_and_evaluate_model(X_train, X_test, y_train, y_test):
     """Train the model, make predictions, and evaluate the performance."""
     start_time = time.process_time()
 
-    reg = RandomForestRegressor(max_depth=100, random_state=0)
+    reg = GradientBoostingRegressor(max_depth=5, n_estimators=200, learning_rate=0.1, random_state=0)
     reg.fit(X_train, y_train)
 
     y_pred = reg.predict(X_test)
