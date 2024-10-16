@@ -3,7 +3,7 @@ This folder contains scripts for data analysis and prediction using RandomForest
 
 
 Sydney Data Analysis (SHAP-Sydney.py)
-This script processes Data-Sydney.csv, splitting it into training and testing sets. It trains a RandomForestRegressor model, achieving an R-squared value over 0.9, evaluates performance, and uses SHAP values to explain predictions.
+This script processes Data-Sydney.csv, splitting it into training and testing sets. It trains a gradient boosting model, achieving an R-squared value over 0.7, evaluates performance, and uses SHAP values to explain predictions.
 
 Usage
 Run with:
