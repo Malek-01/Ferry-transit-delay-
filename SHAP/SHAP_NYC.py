@@ -4,7 +4,7 @@ Created on Tue Jul 23 17:50:00 2024
 
 @author: Malek
 """
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import GradientBoostingRegressor
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler, LabelEncoder
@@ -35,7 +35,7 @@ scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
 # Train the model on the entire dataset
-reg = RandomForestRegressor(max_depth=100, random_state=0)
+reg = GradientBoostingRegressor(max_depth=5, n_estimators=200, learning_rate=0.1, random_state=0)
 start_time = time.process_time()
 reg.fit(X_scaled, y)
 end_time = time.process_time()
