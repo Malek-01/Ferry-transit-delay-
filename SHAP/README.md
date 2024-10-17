@@ -1,4 +1,4 @@
-This folder contains scripts for data analysis and prediction using RandomForestRegressor. Each script preprocesses data, trains a model, evaluates its performance, and explains predictions using SHAP values.
+This folder contains scripts for data analysis and prediction using GradientBoostingRegressor. Each script preprocesses data, trains a model, evaluates its performance, and explains predictions using SHAP values.
 
 
 
@@ -13,7 +13,7 @@ python SHAP-Sydney.py
 ```
 
 NYC Data Analysis (SHAP_NYC.py)
-This script processes Data-NYC.csv, trains a RandomForestRegressor model achieving an R-squared value over 0.9, evaluates its performance, and uses SHAP values to explain predictions.
+This script processes Data-NYC.csv, trains a GradientBoostingRegressor model achieving an R-squared value over 0.75, evaluates its performance, and uses SHAP values to explain predictions.
 
 
 Usage
