@@ -43,7 +43,8 @@ python SHAP/SHAP-Sydney.py
 
 Contributions are welcome! Please open an issue or submit a pull request.
 
-## License
+## Contact
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+For any questions or inquiries, please contact the main contributor:
 
+- Malek Sarhani: malek.sarhani.aui@gmail.com or m.sarhani@aui.ma
